@@ -4,8 +4,10 @@ This is a simple C program implementing a recursive descent parser for basic int
 ## Features
 Arithmetic Operations: 
 Supports addition (+) and multiplication (*) of multi-digit integers.
+
 Input Validation: 
 Detects and reports invalid input tokens or unexpected characters
+
 Recursive Parsing: 
 Implements mutually recursive functions to parse expressions (E), terms (T), and factors (F).
 
