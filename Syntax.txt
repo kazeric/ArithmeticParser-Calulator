@@ -1,0 +1,34 @@
+GRAMMAR
+E → T '+' E | T
+T → F '*' T | F
+F → 'n' // where 'n' is a number
+
+PSEUDO CODE 
+
+parseE() = 
+    parseT()
+    if nextToken == '+':
+        match('+')
+        parseE()
+
+parseT() = 
+    parseF()
+    if nextToken == '*':
+        match('*')
+        parseT()
+
+parseF() = 
+    if nextToken == 'n':
+        match('n')
+    else:
+        reportError("Expected a number")
+
+match(expectedToken) = 
+    if nextToken == expectedToken:
+        consumeToken()
+    else:
+        reportError("Unexpected token: " + nextToken)
+
+consumeToken() = 
+    nextToken = getNextToken() write c code for this pseudo code
+
